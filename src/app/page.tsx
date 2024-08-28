@@ -17,7 +17,7 @@ export default function Chat() {
 
   return (
     <section className="flex justify-end items-center h-[93vh]">
-      <form onSubmit={handleSubmit} className=" h-[90%] rounded-md bg-gray-100 max-w-xl w-full mx-2">
+      <form onSubmit={handleSubmit} className="flex flex-col justify-between h-full rounded-md bg-gray-100 max-w-xl w-full mx-2">
         <div className="text-white h-full overflow-y-auto px-3 scrollbar-thick">
           {messages.map((m) => (
             <div
