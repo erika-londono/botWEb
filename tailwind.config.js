@@ -14,5 +14,25 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-thick::-webkit-scrollbar': {
+          width: '14px',
+          height: '14px',
+        },
+        '.scrollbar-thick::-webkit-scrollbar-thumb': {
+          backgroundColor: '#6b7280',
+          borderRadius: '6px',
+        },
+        '.scrollbar-thick::-webkit-scrollbar-track': {
+          backgroundColor: '#e5e7eb',
+        },
+        '.scrollbar-thick': {
+          scrollbarWidth: 'thin',
+          scrollbarColor: '#6b7280 #e5e7eb',
+        },
+      }, ['responsive']);
+    },
+  ],
 }
